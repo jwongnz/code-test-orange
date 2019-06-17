@@ -2,13 +2,7 @@ export interface Customer {
   id: string;
   firstName: string;
   lastName: string;
-  dateOfBirth: DateOfBirth;
-}
-
-export interface DateOfBirth {
-  day: number;
-  month: string;
-  year: number
+  dateOfBirth: Date;
 }
 
 interface Company {
@@ -16,6 +10,7 @@ interface Company {
 }
 
 export const ADD_CUSTOMER = 'ADD_CUSTOMER';
+export const UPDATE_CUSTOMER = 'UPDATE_CUSTOMER';
 export const DELETE_CUSTOMER = 'DELETE_CUSTOMER';
 
 export interface AddCustomerAction {
@@ -23,9 +18,15 @@ export interface AddCustomerAction {
   payload: Customer
 }
 
+export interface UpdateCustomerAction {
+  type: typeof UPDATE_CUSTOMER;
+  payload: Customer
+}
+
+
 export interface DeleteCustomerAction {
   type: typeof DELETE_CUSTOMER;
   payload: Customer
 }
 
-export type ActionTypes = AddCustomerAction | DeleteCustomerAction;
+export type ActionTypes = AddCustomerAction | UpdateCustomerAction | DeleteCustomerAction;

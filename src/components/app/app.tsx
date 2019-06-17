@@ -1,7 +1,8 @@
 import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import styled from 'styled-components'
-import Button from '@material-ui/core/Button';
-import CustomerList from '../../containers/customer-list/customer-list'
+import CustomerDashboard from '../customer-dashboard/customer-dashboard';
+import CustomerAddOrUpdate from '../../containers/customer-add-or-update/customer-add-or-update';
 
 const App: React.FC = () => {
   const Container = styled.div`
@@ -12,8 +13,10 @@ const App: React.FC = () => {
 
   return (
     <Container>
-      <CustomerList />
-      <Button variant="contained" color="primary">Add Customer</Button>
+      <Router>
+        <Route path="/" exact component={CustomerDashboard} />
+        <Route path="/saveCustomer/:id?" component={CustomerAddOrUpdate} />
+      </Router>
     </Container>
   );
 }

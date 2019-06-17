@@ -1,13 +1,16 @@
-import { ADD_CUSTOMER, DELETE_CUSTOMER, Customer } from './types';
-import uuid from 'uuid';
+import { ADD_CUSTOMER, UPDATE_CUSTOMER, DELETE_CUSTOMER, Customer } from './types';
 
 export function addCustomer(customer: Customer) {
   return {
     type: ADD_CUSTOMER,
-    payload: {
-      ...customer,
-      id: uuid.v4()
-    }
+    payload: customer
+  };
+}
+
+export function updateCustomer(customer: Customer) {
+  return {
+    type: UPDATE_CUSTOMER,
+    payload: customer
   };
 }
 
