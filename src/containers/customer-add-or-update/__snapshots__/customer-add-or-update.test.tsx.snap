@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerAddOrUpdate renders correctly 1`] = `
+<styled.form
+  noValidate={true}
+  onSubmit={[Function]}
+>
+  <h1>
+    Add
+     Customer
+  </h1>
+  <WithStyles(ForwardRef(TextField))
+    id="firstName"
+    label="First Name"
+    margin="normal"
+    onChange={[Function]}
+    required={true}
+    value=""
+  />
+  <WithStyles(ForwardRef(TextField))
+    id="lastName"
+    label="Last Name"
+    margin="normal"
+    onChange={[Function]}
+    required={true}
+    value=""
+  />
+  <WithStyles(ForwardRef(TextField))
+    InputLabelProps={
+      Object {
+        "shrink": true,
+      }
+    }
+    id="dateOfBirth"
+    label="Date of Birth"
+    margin="normal"
+    onChange={[Function]}
+    required={true}
+    type="date"
+    value=""
+  />
+  <styled.div>
+    <WithStyles(ForwardRef(Button))
+      color="primary"
+      component={[Function]}
+      to="/"
+      variant="contained"
+    >
+      Cancel
+    </WithStyles(ForwardRef(Button))>
+    <Styled(WithStyles(ForwardRef(Button)))
+      color="primary"
+      disabled={false}
+      type="submit"
+      variant="contained"
+    >
+      Save
+    </Styled(WithStyles(ForwardRef(Button)))>
+  </styled.div>
+</styled.form>
+`;

@@ -5,10 +5,6 @@ export interface Customer {
   dateOfBirth: Date;
 }
 
-interface Company {
-  name: string;
-}
-
 export const ADD_CUSTOMER = 'ADD_CUSTOMER';
 export const UPDATE_CUSTOMER = 'UPDATE_CUSTOMER';
 export const DELETE_CUSTOMER = 'DELETE_CUSTOMER';

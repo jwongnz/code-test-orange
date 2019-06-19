@@ -36,14 +36,14 @@ const ButtonWrapper = styled.div`
   margin-top: 48px;
 `
 
-// TODO: import material before styled components instead
+// TODO: look into loading material UI before styled components
 const SaveButton = styled(Button)`
   && {
     margin-left: 20px;
   }
 `
 
-class CustomerAddOrUpdate extends React.Component<Props, State> {
+export class CustomerAddOrUpdate extends React.Component<Props, State> {
   existingCustomer?: Customer;
 
   constructor(props: Props) {
@@ -68,6 +68,11 @@ class CustomerAddOrUpdate extends React.Component<Props, State> {
     }));
   };
 
+  handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    this.saveCustomer();
+  }
+
   saveCustomer = () => {
     const saveCustomer = this.existingCustomer ? this.props.updateCustomer : this.props.addCustomer;
 
@@ -83,8 +88,8 @@ class CustomerAddOrUpdate extends React.Component<Props, State> {
 
   render() {
     return (
-      // TODO: form validation
-      <Form noValidate>
+      // TODO: refactor form state and do form validation
+      <Form noValidate onSubmit={this.handleSubmit}>
         <h1>{this.existingCustomer ? 'Edit' : 'Add'} Customer</h1>
         <TextField
           required
@@ -116,7 +121,7 @@ class CustomerAddOrUpdate extends React.Component<Props, State> {
         />
         <ButtonWrapper>
           <Button component={Link} to={'/'} variant="contained" color="primary">Cancel</Button>
-          <SaveButton variant="contained" color="primary" onClick={() => this.saveCustomer()}>Save</SaveButton>
+          <SaveButton type="submit" variant="contained" color="primary" disabled={false}>Save</SaveButton>
         </ButtonWrapper>
       </Form>
     )

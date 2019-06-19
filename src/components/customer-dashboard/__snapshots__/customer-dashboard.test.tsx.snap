@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerDashboard renders correctly 1`] = `
+<styled.div>
+  <styled.div>
+    <WithStyles(ForwardRef(Input))
+      endAdornment={
+        <ForwardRef(WithStyles)
+          position="end"
+        >
+          <Memo />
+        </ForwardRef(WithStyles)>
+      }
+      onChange={[Function]}
+      placeholder="Search for customer"
+      type="search"
+      value=""
+    />
+    <WithStyles(ForwardRef(Button))
+      color="primary"
+      component={[Function]}
+      to="/saveCustomer/"
+      variant="contained"
+    >
+      Add Customer
+    </WithStyles(ForwardRef(Button))>
+  </styled.div>
+  <Connect(CustomerList)
+    searchTerm=""
+  />
+</styled.div>
+`;

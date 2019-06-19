@@ -1,9 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import CustomerDashboard from './customer-dashboard';
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<CustomerDashboard />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('CustomerDashboard', () => {
+  it('renders without crashing', () => {
+    shallow(<CustomerDashboard />);
+  });
+
+  it('renders correctly', () => {
+    const wrapper = shallow(
+      <CustomerDashboard />
+    );
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });

@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomerList renders correctly 1`] = `
+<WithStyles(ForwardRef(Table))>
+  <WithStyles(ForwardRef(TableHead))>
+    <WithStyles(ForwardRef(TableRow))>
+      <WithStyles(ForwardRef(TableCell)) />
+      <WithStyles(ForwardRef(TableCell))>
+        First Name
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Last Name
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Date of Birth
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell)) />
+      <WithStyles(ForwardRef(TableCell)) />
+    </WithStyles(ForwardRef(TableRow))>
+  </WithStyles(ForwardRef(TableHead))>
+  <WithStyles(ForwardRef(TableBody))>
+    <WithStyles(ForwardRef(TableRow))
+      key="a"
+    >
+      <WithStyles(ForwardRef(TableCell))>
+        1
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        John
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Smith
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Sun May 03 1992
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Edit"
+          component={[Function]}
+          to="/savecustomer/a"
+        >
+          <EditIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Delete"
+          onClick={[Function]}
+        >
+          <DeleteIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+    </WithStyles(ForwardRef(TableRow))>
+    <WithStyles(ForwardRef(TableRow))
+      key="b"
+    >
+      <WithStyles(ForwardRef(TableCell))>
+        2
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Dylan
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Skywaltzer
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Sun May 03 1992
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Edit"
+          component={[Function]}
+          to="/savecustomer/b"
+        >
+          <EditIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Delete"
+          onClick={[Function]}
+        >
+          <DeleteIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+    </WithStyles(ForwardRef(TableRow))>
+    <WithStyles(ForwardRef(TableRow))
+      key="c"
+    >
+      <WithStyles(ForwardRef(TableCell))>
+        3
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Bob
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Smith
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Tue Aug 14 2001
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Edit"
+          component={[Function]}
+          to="/savecustomer/c"
+        >
+          <EditIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Delete"
+          onClick={[Function]}
+        >
+          <DeleteIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+    </WithStyles(ForwardRef(TableRow))>
+    <WithStyles(ForwardRef(TableRow))
+      key="d"
+    >
+      <WithStyles(ForwardRef(TableCell))>
+        4
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Luke
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Skywalker
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Tue Aug 14 2001
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Edit"
+          component={[Function]}
+          to="/savecustomer/d"
+        >
+          <EditIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Delete"
+          onClick={[Function]}
+        >
+          <DeleteIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+    </WithStyles(ForwardRef(TableRow))>
+    <WithStyles(ForwardRef(TableRow))
+      key="e"
+    >
+      <WithStyles(ForwardRef(TableCell))>
+        5
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Sigmund
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Knight
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Sun May 03 1992
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Edit"
+          component={[Function]}
+          to="/savecustomer/e"
+        >
+          <EditIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Delete"
+          onClick={[Function]}
+        >
+          <DeleteIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+    </WithStyles(ForwardRef(TableRow))>
+    <WithStyles(ForwardRef(TableRow))
+      key="f"
+    >
+      <WithStyles(ForwardRef(TableCell))>
+        6
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Teemo
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Mushroom
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Tue Aug 14 2001
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Edit"
+          component={[Function]}
+          to="/savecustomer/f"
+        >
+          <EditIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Delete"
+          onClick={[Function]}
+        >
+          <DeleteIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+    </WithStyles(ForwardRef(TableRow))>
+    <WithStyles(ForwardRef(TableRow))
+      key="g"
+    >
+      <WithStyles(ForwardRef(TableCell))>
+        7
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Teeto
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Potatoes
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        Tue Aug 14 2001
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Edit"
+          component={[Function]}
+          to="/savecustomer/g"
+        >
+          <EditIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+      <WithStyles(ForwardRef(TableCell))>
+        <WithStyles(ForwardRef(IconButton))
+          aria-label="Delete"
+          onClick={[Function]}
+        >
+          <DeleteIcon />
+        </WithStyles(ForwardRef(IconButton))>
+      </WithStyles(ForwardRef(TableCell))>
+    </WithStyles(ForwardRef(TableRow))>
+  </WithStyles(ForwardRef(TableBody))>
+</WithStyles(ForwardRef(Table))>
+`;

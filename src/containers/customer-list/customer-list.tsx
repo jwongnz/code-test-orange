@@ -10,10 +10,11 @@ import { Link } from 'react-router-dom';
 
 interface AppProps {
   customers: Customer[],
-  deleteCustomer: typeof deleteCustomer
+  deleteCustomer: typeof deleteCustomer,
+  searchTerm: string
 }
 
-class CustomerList extends React.Component<AppProps> {
+export class CustomerList extends React.Component<AppProps> {
   deleteCustomer = (customer: Customer) => {
     this.props.deleteCustomer(customer)
   }
@@ -22,6 +23,7 @@ class CustomerList extends React.Component<AppProps> {
     if (!(this.props.customers && this.props.customers.length > 0))
       return null;
 
+    // TODO: Make responsive
     return (
       <Table>
         <TableHead>
@@ -35,12 +37,16 @@ class CustomerList extends React.Component<AppProps> {
           </TableRow>
         </TableHead>
         <TableBody>
-          {this.props.customers.map((customer, index) => (
+          {this.props.customers.filter((customer) => {
+            return  customer.firstName.toLowerCase().includes(this.props.searchTerm.toLowerCase()) ||
+                    customer.lastName.toLowerCase().includes(this.props.searchTerm.toLowerCase())
+          }).map((customer, index) => (
             <TableRow key={customer.id}>
               <TableCell>{index + 1}</TableCell>
               <TableCell>{customer.firstName}</TableCell>
               <TableCell>{customer.lastName}</TableCell>
               <TableCell>
+                {/* TODO: nicer display & management of DOB - use moment? */}
                 {customer.dateOfBirth.toDateString()}
               </TableCell>
               <TableCell>
