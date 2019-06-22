@@ -19,9 +19,21 @@ interface Props extends RouteComponentProps<MatchParams> {
 }
 
 interface State {
-  firstName: string,
-  lastName: string,
-  dateOfBirth: string
+  firstName: {
+    value: string
+    touched: boolean
+    valid: boolean
+  },
+  lastName: {
+    value: string
+    touched: boolean
+    valid: boolean
+  },
+  dateOfBirth: {
+    value: string
+    touched: boolean
+    valid: boolean
+  }
 }
 
 const Form = styled.form`
@@ -54,9 +66,21 @@ export class CustomerAddOrUpdate extends React.Component<Props, State> {
     });
   
     this.state = {
-      firstName: this.existingCustomer ? this.existingCustomer.firstName : '',
-      lastName: this.existingCustomer ? this.existingCustomer.lastName : '',
-      dateOfBirth: this.existingCustomer ? this.existingCustomer.dateOfBirth.toISOString().substr(0, 10) : ''
+      firstName: {
+        value: this.existingCustomer ? this.existingCustomer.firstName : '',
+        touched: false,
+        valid: this.existingCustomer ? true : false
+      },
+      lastName: {
+        value: this.existingCustomer ? this.existingCustomer.lastName : '',
+        touched: false,
+        valid: this.existingCustomer ? true : false
+      },
+      dateOfBirth: {
+        value: this.existingCustomer ? this.existingCustomer.dateOfBirth.toISOString().substr(0, 10) : '',
+        touched: false,
+        valid: this.existingCustomer ? true : false
+      }
     };
   }
 
@@ -64,11 +88,15 @@ export class CustomerAddOrUpdate extends React.Component<Props, State> {
     const target = event.target;
     this.setState((current) => ({
       ...current,
-      [name]: target.value
+      [name]: {
+        value: target.value,
+        touched: true,
+        valid: !!target.value
+      }
     }));
   };
 
-  handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     this.saveCustomer();
   }
@@ -78,50 +106,63 @@ export class CustomerAddOrUpdate extends React.Component<Props, State> {
 
     saveCustomer({
       id: this.existingCustomer ? this.existingCustomer.id : uuid.v4(),
-      firstName: this.state.firstName,
-      lastName: this.state.lastName,
-      dateOfBirth: new Date(this.state.dateOfBirth)
+      firstName: this.state.firstName.value,
+      lastName: this.state.lastName.value,
+      dateOfBirth: new Date(this.state.dateOfBirth.value)
     });
 
     this.props.history.push('/');
   }
 
+  formIsValid = () => {
+    let valid = true;
+    for (let [key, value] of Object.entries(this.state)) {
+      if (!value.valid) {
+        valid = false;
+      }
+    }
+
+    return valid;
+  }
+
   render() {
     return (
-      // TODO: refactor form state and do form validation
       <Form noValidate onSubmit={this.handleSubmit}>
         <h1>{this.existingCustomer ? 'Edit' : 'Add'} Customer</h1>
         <TextField
           required
           id="firstName"
           label="First Name"
-          value={this.state.firstName}
+          value={this.state.firstName.value}
           onChange={this.handleInputChange('firstName')}
           margin="normal"
+          error={this.state.firstName.touched && !this.state.firstName.valid}
         />
         <TextField
           required
           id="lastName"
           label="Last Name"
-          value={this.state.lastName}
+          value={this.state.lastName.value}
           onChange={this.handleInputChange('lastName')}
           margin="normal"
+          error={this.state.lastName.touched && !this.state.lastName.valid}
         />
         <TextField
           required
           id="dateOfBirth"
           label="Date of Birth"
           type="date"
-          value={this.state.dateOfBirth}
+          value={this.state.dateOfBirth.value}
           onChange={this.handleInputChange('dateOfBirth')}
           margin="normal"
           InputLabelProps={{
             shrink: true,
           }}
+          error={this.state.dateOfBirth.touched && !this.state.dateOfBirth.valid}
         />
         <ButtonWrapper>
           <Button component={Link} to={'/'} variant="contained" color="primary">Cancel</Button>
-          <SaveButton type="submit" variant="contained" color="primary" disabled={false}>Save</SaveButton>
+          <SaveButton type="submit" variant="contained" color="primary" disabled={!this.formIsValid()}>Save</SaveButton>
         </ButtonWrapper>
       </Form>
     )
