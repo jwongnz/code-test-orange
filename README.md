@@ -6,6 +6,7 @@ It is for demonstration purposes only and therefore state is only persisted to m
 I have aimed to show good coding practices throughout the app, but due to time constraints there are many imperfections. A few to point out: <br>
 * Table is not responsive on mobile, I would consider progressive disclosure or changing from a table to a flex/grid layout that can stack on mobile as well as shrinking font sizes/padding
 * I opted to include the Material UI library to save time, but if I were to use Styled components more properly I would have liked to of had a folder with a bunch of exported generic components e.g. for the table elements, form and it's fields.. and these would have had custom styles
+* If I had time I would move logic to retreive the existing customer from the store of customers (in customer-add-or-update.tsx) into a selector
 
 ## Available Scripts
 

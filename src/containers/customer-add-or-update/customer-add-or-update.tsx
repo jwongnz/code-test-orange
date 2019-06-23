@@ -127,7 +127,7 @@ export class CustomerAddOrUpdate extends React.Component<Props, State> {
 
   render() {
     return (
-      <Form noValidate onSubmit={this.handleSubmit}>
+      <Form noValidate onSubmit={this.handleSubmit} data-test-id="form">
         <h1>{this.existingCustomer ? 'Edit' : 'Add'} Customer</h1>
         <TextField
           required
@@ -162,7 +162,7 @@ export class CustomerAddOrUpdate extends React.Component<Props, State> {
         />
         <ButtonWrapper>
           <Button component={Link} to={'/'} variant="contained" color="primary">Cancel</Button>
-          <SaveButton type="submit" variant="contained" color="primary" disabled={!this.formIsValid()}>Save</SaveButton>
+          <SaveButton type="submit" variant="contained" color="primary" disabled={!this.formIsValid()} data-test-id="saveButton">Save</SaveButton>
         </ButtonWrapper>
       </Form>
     )

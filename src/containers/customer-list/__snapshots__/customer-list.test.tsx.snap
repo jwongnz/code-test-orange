@@ -20,6 +20,7 @@ exports[`CustomerList renders correctly 1`] = `
   </WithStyles(ForwardRef(TableHead))>
   <WithStyles(ForwardRef(TableBody))>
     <WithStyles(ForwardRef(TableRow))
+      data-test-id="customerRow"
       key="a"
     >
       <WithStyles(ForwardRef(TableCell))>
@@ -46,6 +47,7 @@ exports[`CustomerList renders correctly 1`] = `
       <WithStyles(ForwardRef(TableCell))>
         <WithStyles(ForwardRef(IconButton))
           aria-label="Delete"
+          data-test-id="delete-0"
           onClick={[Function]}
         >
           <DeleteIcon />
@@ -53,6 +55,7 @@ exports[`CustomerList renders correctly 1`] = `
       </WithStyles(ForwardRef(TableCell))>
     </WithStyles(ForwardRef(TableRow))>
     <WithStyles(ForwardRef(TableRow))
+      data-test-id="customerRow"
       key="b"
     >
       <WithStyles(ForwardRef(TableCell))>
@@ -79,6 +82,7 @@ exports[`CustomerList renders correctly 1`] = `
       <WithStyles(ForwardRef(TableCell))>
         <WithStyles(ForwardRef(IconButton))
           aria-label="Delete"
+          data-test-id="delete-1"
           onClick={[Function]}
         >
           <DeleteIcon />
@@ -86,6 +90,7 @@ exports[`CustomerList renders correctly 1`] = `
       </WithStyles(ForwardRef(TableCell))>
     </WithStyles(ForwardRef(TableRow))>
     <WithStyles(ForwardRef(TableRow))
+      data-test-id="customerRow"
       key="c"
     >
       <WithStyles(ForwardRef(TableCell))>
@@ -112,6 +117,7 @@ exports[`CustomerList renders correctly 1`] = `
       <WithStyles(ForwardRef(TableCell))>
         <WithStyles(ForwardRef(IconButton))
           aria-label="Delete"
+          data-test-id="delete-2"
           onClick={[Function]}
         >
           <DeleteIcon />
@@ -119,6 +125,7 @@ exports[`CustomerList renders correctly 1`] = `
       </WithStyles(ForwardRef(TableCell))>
     </WithStyles(ForwardRef(TableRow))>
     <WithStyles(ForwardRef(TableRow))
+      data-test-id="customerRow"
       key="d"
     >
       <WithStyles(ForwardRef(TableCell))>
@@ -145,6 +152,7 @@ exports[`CustomerList renders correctly 1`] = `
       <WithStyles(ForwardRef(TableCell))>
         <WithStyles(ForwardRef(IconButton))
           aria-label="Delete"
+          data-test-id="delete-3"
           onClick={[Function]}
         >
           <DeleteIcon />
@@ -152,6 +160,7 @@ exports[`CustomerList renders correctly 1`] = `
       </WithStyles(ForwardRef(TableCell))>
     </WithStyles(ForwardRef(TableRow))>
     <WithStyles(ForwardRef(TableRow))
+      data-test-id="customerRow"
       key="e"
     >
       <WithStyles(ForwardRef(TableCell))>
@@ -178,6 +187,7 @@ exports[`CustomerList renders correctly 1`] = `
       <WithStyles(ForwardRef(TableCell))>
         <WithStyles(ForwardRef(IconButton))
           aria-label="Delete"
+          data-test-id="delete-4"
           onClick={[Function]}
         >
           <DeleteIcon />
@@ -185,6 +195,7 @@ exports[`CustomerList renders correctly 1`] = `
       </WithStyles(ForwardRef(TableCell))>
     </WithStyles(ForwardRef(TableRow))>
     <WithStyles(ForwardRef(TableRow))
+      data-test-id="customerRow"
       key="f"
     >
       <WithStyles(ForwardRef(TableCell))>
@@ -211,6 +222,7 @@ exports[`CustomerList renders correctly 1`] = `
       <WithStyles(ForwardRef(TableCell))>
         <WithStyles(ForwardRef(IconButton))
           aria-label="Delete"
+          data-test-id="delete-5"
           onClick={[Function]}
         >
           <DeleteIcon />
@@ -218,6 +230,7 @@ exports[`CustomerList renders correctly 1`] = `
       </WithStyles(ForwardRef(TableCell))>
     </WithStyles(ForwardRef(TableRow))>
     <WithStyles(ForwardRef(TableRow))
+      data-test-id="customerRow"
       key="g"
     >
       <WithStyles(ForwardRef(TableCell))>
@@ -244,6 +257,7 @@ exports[`CustomerList renders correctly 1`] = `
       <WithStyles(ForwardRef(TableCell))>
         <WithStyles(ForwardRef(IconButton))
           aria-label="Delete"
+          data-test-id="delete-6"
           onClick={[Function]}
         >
           <DeleteIcon />

@@ -1,13 +1,10 @@
 import React from 'react';
 import { CustomerList } from './customer-list';
 import { shallow } from 'enzyme';
-import { Customer } from '../../store/customers/types';
 import toJson from 'enzyme-to-json';
-import { TableRow } from '@material-ui/core';
 
 describe('CustomerList', () => {
   let props: any;
-  let mockCustomer: Customer;
 
   beforeEach(() => {
     props = {
@@ -23,12 +20,6 @@ describe('CustomerList', () => {
       ],
       deleteCustomer: jest.fn()
     }
-
-    mockCustomer = {id: 'abc', firstName: 'John', lastName: 'Smith', dateOfBirth: new Date('1992-05-03')};
-  });
-
-  it('renders without crashing', () => {
-    shallow(<CustomerList {...props}/>);
   });
 
   it('renders correctly', () => {
@@ -39,13 +30,13 @@ describe('CustomerList', () => {
   describe('search', () => {
     it('should show all customers if no search term', () => {
       const wrapper = shallow(<CustomerList {...props}/>);
-      expect(wrapper.find(TableRow)).toHaveLength(8);
+      expect(wrapper.find('[data-test-id="customerRow"]')).toHaveLength(7);
     });
 
     it('shows customers based on search term', () => {
       props.searchTerm = 'Smith';
       const wrapper = shallow(<CustomerList {...props}/>);
-      expect(wrapper.find(TableRow)).toHaveLength(3);
+      expect(wrapper.find('[data-test-id="customerRow"]')).toHaveLength(2);
     });
   });
 
@@ -53,13 +44,12 @@ describe('CustomerList', () => {
     it('dispatches deleteCustomer action', () => {
       // arrange
       const wrapper = shallow<CustomerList>(<CustomerList {...props}/>);
-      const instance = wrapper.instance();
 
       // act
-      instance.deleteCustomer(mockCustomer);
+      wrapper.find('[data-test-id="delete-0"]').simulate('click');
       
       // assert
-      expect(props.deleteCustomer).toHaveBeenCalledWith(mockCustomer);
+      expect(props.deleteCustomer).toHaveBeenCalledWith(props.customers[0]);
     });
   });
 });

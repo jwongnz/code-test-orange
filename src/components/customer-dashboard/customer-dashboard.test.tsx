@@ -4,10 +4,6 @@ import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
 describe('CustomerDashboard', () => {
-  it('renders without crashing', () => {
-    shallow(<CustomerDashboard />);
-  });
-
   it('renders correctly', () => {
     const wrapper = shallow(
       <CustomerDashboard />

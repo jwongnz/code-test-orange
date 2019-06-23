@@ -41,7 +41,7 @@ export class CustomerList extends React.Component<AppProps> {
             return  customer.firstName.toLowerCase().includes(this.props.searchTerm.toLowerCase()) ||
                     customer.lastName.toLowerCase().includes(this.props.searchTerm.toLowerCase())
           }).map((customer, index) => (
-            <TableRow key={customer.id}>
+            <TableRow key={customer.id} data-test-id="customerRow">
               <TableCell>{index + 1}</TableCell>
               <TableCell>{customer.firstName}</TableCell>
               <TableCell>{customer.lastName}</TableCell>
@@ -55,7 +55,7 @@ export class CustomerList extends React.Component<AppProps> {
                 </IconButton>
               </TableCell>
               <TableCell>
-                <IconButton aria-label="Delete" onClick={() => this.deleteCustomer(customer)}>
+                <IconButton aria-label="Delete" onClick={() => this.deleteCustomer(customer)} data-test-id={`delete-${index}`}>
                   <DeleteIcon />
                 </IconButton>
               </TableCell>
